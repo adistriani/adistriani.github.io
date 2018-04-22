@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <title>Tutorial Belajar JQuery</title>
+  </head>
+  <body>
+    <h1>Tutorial JQuery Dasar</h1>
+    <button id="tampilkan">Tampilkan kotak</button>
+    <button id="sembunyikan">Sembunyikan kotak</button>
+    <button id="slide">Slide kotak</button>
+    <div class="box"></div>
+  </body>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#tampilkan').click(function(){
+      $('.box').fadeIn(700).slideDown(5000);
+    });
+  });
+
+  $(document).ready(function(){
+    $('#sembunyikan').click(function(){
+      $('.box').slideUp(2000);
+    });
+  });
+
+  $(document).ready(function(){
+    $('#slide').click(function(){
+      $('.box').slideToggle(1000);
+    });
+  });
+
+  </script>
+</html>
